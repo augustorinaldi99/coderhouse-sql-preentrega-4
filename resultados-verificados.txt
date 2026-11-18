@@ -1,0 +1,322 @@
+PREENTREGA 4 - RESULTADOS VERIFICADOS SOBRE EL DATASET DE CLASES
+Motor: PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+Fuente: dataset/ddl-tienda.sql (copia exacta de CLASES/VARIOS/ddl tienda.txt).
+SHA256: 70282cc33304b7dbe6cb7caafcf777812569d9f01f89c8d9a1454c990b9530c3
+Regla: se analizan solamente pedidos con estado Completado.
+Entorno: instancia temporal separada de las bases de DBeaver.
+
+REGISTROS ORIGINALES Y VISTA
+clientes,productos,categorias,pedidos,detalles,detalles_completados
+100,39,8,200,597,374
+
+CONSULTA 1
+categoria,unidades_vendidas,ingreso_total
+Electrónica,203,137055.43
+Hogar y Decoración,114,32123.63
+Deportes y Outdoors,94,24509.36
+Ropa y Calzado,126,18370.26
+
+CONSULTA 2
+id_cliente,nombre_cliente,email,unidades_compradas
+1,Martín García,martín.garcía1@email.com,0
+3,Santiago Martínez,santiago.martínez3@email.com,0
+10,Catalina Torres,catalina.torres10@email.com,0
+21,Antonio García,antonio.garcía21@email.com,0
+26,Marcela Hernández,marcela.hernández26@email.com,0
+31,Martín Flores,martín.flores31@email.com,0
+36,Agustina Ramos,agustina.ramos36@email.com,0
+37,Tomás Díaz,tomás.díaz37@email.com,0
+38,Luciana Cruz,luciana.cruz38@email.com,0
+41,Emilio García,emilio.garcía41@email.com,0
+43,Rodrigo Martínez,rodrigo.martínez43@email.com,0
+46,Jimena Hernández,jimena.hernández46@email.com,0
+52,Paola Rivera,paola.rivera52@email.com,0
+54,Claudia Castro,claudia.castro54@email.com,0
+59,Horacio Reyes,horacio.reyes59@email.com,0
+63,Santiago Martínez,santiago.martínez63@email.com,0
+64,Valentina Rodríguez,valentina.rodríguez64@email.com,0
+65,Nicolás González,nicolás.gonzález65@email.com,0
+68,Luciana Sánchez,luciana.sánchez68@email.com,0
+69,Benjamín Ramírez,benjamín.ramírez69@email.com,0
+71,Emilio Flores,emilio.flores71@email.com,0
+76,Jimena Ramos,jimena.ramos76@email.com,0
+79,Federico Reyes,federico.reyes79@email.com,0
+83,Ricardo Martínez,ricardo.martínez83@email.com,0
+87,Patricio Pérez,patricio.pérez87@email.com,0
+88,Silvia Sánchez,silvia.sánchez88@email.com,0
+92,Florencia Rivera,florencia.rivera92@email.com,0
+
+CONSULTA 3
+ranking_cliente,id_cliente,nombre_cliente,ingreso_total_cliente,pedidos_completados,producto_mas_comprado,veces_comprado,unidades_producto,ultima_compra_producto,ultima_transaccion_cliente
+1,90,Verónica Torres,21945.47,3,Laptop HP ProBook 450,2,8,2024-06-19 08:34:00,2024-08-13 10:28:00
+1,90,Verónica Torres,21945.47,3,Café Origen Etiopía 250g,2,6,2024-08-13 10:28:00,2024-08-13 10:28:00
+2,24,Claudia Rodríguez,12616.07,4,Sillón Relax 3 Cuerpos,2,2,2024-06-05 09:57:00,2024-06-05 09:57:00
+2,24,Claudia Rodríguez,12616.07,4,Aceite de Oliva Extra Virgen 1L,2,8,2024-06-05 09:57:00,2024-06-05 09:57:00
+3,99,Benjamín Reyes,10412.16,1,Laptop HP ProBook 450,1,4,2024-02-13 13:00:00,2024-02-13 13:00:00
+3,99,Benjamín Reyes,10412.16,1,Mouse Inalámbrico MX Master,1,1,2024-02-13 13:00:00,2024-02-13 13:00:00
+3,99,Benjamín Reyes,10412.16,1,Auriculares Sony WH-1000XM5,1,3,2024-02-13 13:00:00,2024-02-13 13:00:00
+3,99,Benjamín Reyes,10412.16,1,Python para Análisis de Datos,1,1,2024-02-13 13:00:00,2024-02-13 13:00:00
+4,89,Horacio Ramírez,9319.22,1,Laptop HP ProBook 450,1,4,2023-06-11 19:38:00,2023-06-11 19:38:00
+4,89,Horacio Ramírez,9319.22,1,Raqueta Tenis Wilson Blade,1,2,2023-06-11 19:38:00,2023-06-11 19:38:00
+5,13,Rodrigo Morales,7918.40,2,Laptop HP ProBook 450,1,1,2023-11-20 09:41:00,2024-07-01 10:59:00
+5,13,Rodrigo Morales,7918.40,2,Monitor Dell 24 FHD,1,1,2023-11-20 09:41:00,2024-07-01 10:59:00
+5,13,Rodrigo Morales,7918.40,2,Disco SSD Externo 1TB,1,3,2024-07-01 10:59:00,2024-07-01 10:59:00
+5,13,Rodrigo Morales,7918.40,2,Zapatillas Nike Air Max,1,2,2023-11-20 09:41:00,2024-07-01 10:59:00
+5,13,Rodrigo Morales,7918.40,2,Campera The North Face,1,4,2023-11-20 09:41:00,2024-07-01 10:59:00
+5,13,Rodrigo Morales,7918.40,2,Bicicleta MTB Specialized,1,4,2024-07-01 10:59:00,2024-07-01 10:59:00
+5,13,Rodrigo Morales,7918.40,2,Hot Wheels 20 autos Pack,1,2,2024-07-01 10:59:00,2024-07-01 10:59:00
+6,11,Emilio Flores,7572.86,2,Tablet iPad Air 10.9,2,7,2024-07-09 15:14:00,2024-07-09 15:14:00
+7,70,Catalina Torres,7189.76,4,Crema Hidratante Nivea Q10,2,5,2024-12-01 17:41:00,2024-12-01 17:41:00
+7,70,Catalina Torres,7189.76,4,Muñeca Barbie Astronauta,2,3,2024-03-01 13:51:00,2024-12-01 17:41:00
+8,40,Catalina Vargas,6784.36,2,Tablet iPad Air 10.9,1,4,2023-02-05 15:05:00,2023-10-07 17:42:00
+8,40,Catalina Vargas,6784.36,2,Remera Polo Ralph Lauren,1,3,2023-10-07 17:42:00,2023-10-07 17:42:00
+8,40,Catalina Vargas,6784.36,2,Sillón Relax 3 Cuerpos,1,4,2023-10-07 17:42:00,2023-10-07 17:42:00
+8,40,Catalina Vargas,6784.36,2,Colchoneta Yoga 6mm,1,2,2023-02-05 15:05:00,2023-10-07 17:42:00
+8,40,Catalina Vargas,6784.36,2,Mancuernas 10kg Par,1,1,2023-02-05 15:05:00,2023-10-07 17:42:00
+8,40,Catalina Vargas,6784.36,2,Set Maquillaje MAC Studio,1,4,2023-02-05 15:05:00,2023-10-07 17:42:00
+9,8,Luciana Sánchez,6691.72,1,Laptop HP ProBook 450,1,2,2024-11-24 09:30:00,2024-11-24 09:30:00
+9,8,Luciana Sánchez,6691.72,1,Monitor Dell 24 FHD,1,1,2024-11-24 09:30:00,2024-11-24 09:30:00
+9,8,Luciana Sánchez,6691.72,1,Auriculares Sony WH-1000XM5,1,4,2024-11-24 09:30:00,2024-11-24 09:30:00
+9,8,Luciana Sánchez,6691.72,1,Python para Análisis de Datos,1,2,2024-11-24 09:30:00,2024-11-24 09:30:00
+9,8,Luciana Sánchez,6691.72,1,Juego de Mesa Catan,1,4,2024-11-24 09:30:00,2024-11-24 09:30:00
+10,75,Facundo Ortiz,6544.88,1,Monitor Dell 24 FHD,1,4,2023-07-07 17:34:00,2023-07-07 17:34:00
+10,75,Facundo Ortiz,6544.88,1,Sillón Relax 3 Cuerpos,1,2,2023-07-07 17:34:00,2023-07-07 17:34:00
+10,75,Facundo Ortiz,6544.88,1,Bicicleta MTB Specialized,1,4,2023-07-07 17:34:00,2023-07-07 17:34:00
+10,75,Facundo Ortiz,6544.88,1,Crema Hidratante Nivea Q10,1,3,2023-07-07 17:34:00,2023-07-07 17:34:00
+11,12,Renata Rivera,6021.55,2,Smartphone Samsung A55,2,8,2023-10-24 14:15:00,2023-10-24 14:15:00
+12,73,Rodrigo Morales,5518.62,4,Botas Timberland Classic,2,5,2024-09-28 09:12:00,2024-09-28 09:12:00
+12,73,Rodrigo Morales,5518.62,4,Aspiradora Dyson V15,2,6,2024-09-28 09:12:00,2024-09-28 09:12:00
+13,20,Daniela Vargas,5461.76,2,Laptop HP ProBook 450,1,1,2023-03-11 08:45:00,2024-06-23 18:10:00
+13,20,Daniela Vargas,5461.76,2,Tablet iPad Air 10.9,1,3,2023-03-11 08:45:00,2024-06-23 18:10:00
+13,20,Daniela Vargas,5461.76,2,Clean Code - Robert Martin,1,4,2024-06-23 18:10:00,2024-06-23 18:10:00
+13,20,Daniela Vargas,5461.76,2,LEGO City Police Station,1,4,2023-03-11 08:45:00,2024-06-23 18:10:00
+14,100,Catalina Vargas,5219.70,5,Campera The North Face,2,2,2024-11-26 19:05:00,2024-11-26 19:05:00
+15,81,Antonio García,5040.36,6,Té Verde Matcha 100g,2,3,2024-08-18 10:39:00,2024-10-28 11:46:00
+16,48,Gabriela Sánchez,4750.80,1,Tablet iPad Air 10.9,1,4,2024-01-18 10:09:00,2024-01-18 10:09:00
+16,48,Gabriela Sánchez,4750.80,1,Zapatillas Nike Air Max,1,2,2024-01-18 10:09:00,2024-01-18 10:09:00
+16,48,Gabriela Sánchez,4750.80,1,Aspiradora Dyson V15,1,2,2024-01-18 10:09:00,2024-01-18 10:09:00
+16,48,Gabriela Sánchez,4750.80,1,Chocolates Lindt Selección,1,2,2024-01-18 10:09:00,2024-01-18 10:09:00
+17,80,Daniela Vargas,4667.91,1,Monitor Dell 24 FHD,1,4,2024-12-31 10:07:00,2024-12-31 10:07:00
+17,80,Daniela Vargas,4667.91,1,Jean Levi 511 Slim,1,3,2024-12-31 10:07:00,2024-12-31 10:07:00
+17,80,Daniela Vargas,4667.91,1,Bicicleta MTB Specialized,1,3,2024-12-31 10:07:00,2024-12-31 10:07:00
+17,80,Daniela Vargas,4667.91,1,Crema Hidratante Nivea Q10,1,3,2024-12-31 10:07:00,2024-12-31 10:07:00
+18,42,Renata López,4254.92,2,Teclado Logitech MX Keys,1,1,2023-09-15 08:15:00,2024-07-29 19:20:00
+18,42,Renata López,4254.92,2,Auriculares Sony WH-1000XM5,1,2,2023-09-15 08:15:00,2024-07-29 19:20:00
+18,42,Renata López,4254.92,2,Tablet iPad Air 10.9,1,3,2023-09-15 08:15:00,2024-07-29 19:20:00
+18,42,Renata López,4254.92,2,Cafetera Nespresso Vertuo,1,1,2023-09-15 08:15:00,2024-07-29 19:20:00
+18,42,Renata López,4254.92,2,Aceite de Oliva Extra Virgen 1L,1,3,2024-07-29 19:20:00,2024-07-29 19:20:00
+18,42,Renata López,4254.92,2,El Principito - Saint-Exupéry,1,1,2024-07-29 19:20:00,2024-07-29 19:20:00
+18,42,Renata López,4254.92,2,Crema Hidratante Nivea Q10,1,2,2023-09-15 08:15:00,2024-07-29 19:20:00
+18,42,Renata López,4254.92,2,LEGO City Police Station,1,4,2024-07-29 19:20:00,2024-07-29 19:20:00
+19,98,Luciana Cruz,4028.40,2,Smartphone Samsung A55,1,4,2024-01-02 15:48:00,2024-01-02 15:48:00
+19,98,Luciana Cruz,4028.40,2,Auriculares Sony WH-1000XM5,1,4,2024-01-02 15:48:00,2024-01-02 15:48:00
+19,98,Luciana Cruz,4028.40,2,Jean Levi 511 Slim,1,2,2024-01-02 15:48:00,2024-01-02 15:48:00
+19,98,Luciana Cruz,4028.40,2,Café Origen Etiopía 250g,1,3,2023-08-05 17:44:00,2024-01-02 15:48:00
+19,98,Luciana Cruz,4028.40,2,Juego de Mesa Catan,1,1,2024-01-02 15:48:00,2024-01-02 15:48:00
+20,58,Silvia Cruz,3925.48,3,Café Origen Etiopía 250g,2,6,2023-12-14 20:14:00,2024-06-06 18:09:00
+20,58,Silvia Cruz,3925.48,3,Chocolates Lindt Selección,2,5,2024-06-06 18:09:00,2024-06-06 18:09:00
+21,34,Valentina Castro,3779.34,2,Smartphone Samsung A55,1,2,2024-12-30 11:28:00,2024-12-30 11:28:00
+21,34,Valentina Castro,3779.34,2,Mouse Inalámbrico MX Master,1,2,2024-12-30 11:28:00,2024-12-30 11:28:00
+21,34,Valentina Castro,3779.34,2,Tablet iPad Air 10.9,1,2,2024-12-30 11:28:00,2024-12-30 11:28:00
+21,34,Valentina Castro,3779.34,2,Lámpara de Pie LED,1,3,2024-12-30 11:28:00,2024-12-30 11:28:00
+21,34,Valentina Castro,3779.34,2,Café Origen Etiopía 250g,1,2,2024-02-04 19:41:00,2024-12-30 11:28:00
+21,34,Valentina Castro,3779.34,2,Crema Hidratante Nivea Q10,1,2,2024-02-04 19:41:00,2024-12-30 11:28:00
+22,44,Natalia Rodríguez,3761.70,2,Laptop HP ProBook 450,1,1,2023-05-12 13:44:00,2023-05-12 13:44:00
+22,44,Natalia Rodríguez,3761.70,2,Jean Levi 511 Slim,1,3,2023-02-06 14:52:00,2023-05-12 13:44:00
+22,44,Natalia Rodríguez,3761.70,2,Sillón Relax 3 Cuerpos,1,1,2023-02-06 14:52:00,2023-05-12 13:44:00
+22,44,Natalia Rodríguez,3761.70,2,Café Origen Etiopía 250g,1,3,2023-02-06 14:52:00,2023-05-12 13:44:00
+22,44,Natalia Rodríguez,3761.70,2,Pelota Fútbol Adidas Pro,1,3,2023-05-12 13:44:00,2023-05-12 13:44:00
+22,44,Natalia Rodríguez,3761.70,2,Set Maquillaje MAC Studio,1,3,2023-05-12 13:44:00,2023-05-12 13:44:00
+22,44,Natalia Rodríguez,3761.70,2,Hot Wheels 20 autos Pack,1,3,2023-05-12 13:44:00,2023-05-12 13:44:00
+23,29,Horacio Ramírez,3643.58,1,Teclado Logitech MX Keys,1,1,2024-02-03 16:02:00,2024-02-03 16:02:00
+23,29,Horacio Ramírez,3643.58,1,Tablet iPad Air 10.9,1,4,2024-02-03 16:02:00,2024-02-03 16:02:00
+24,72,Renata Rivera,3527.26,1,Monitor Dell 24 FHD,1,2,2024-10-15 11:02:00,2024-10-15 11:02:00
+24,72,Renata Rivera,3527.26,1,Zapatillas Nike Air Max,1,2,2024-10-15 11:02:00,2024-10-15 11:02:00
+24,72,Renata Rivera,3527.26,1,Sillón Relax 3 Cuerpos,1,4,2024-10-15 11:02:00,2024-10-15 11:02:00
+24,72,Renata Rivera,3527.26,1,LEGO City Police Station,1,2,2024-10-15 11:02:00,2024-10-15 11:02:00
+25,35,Nicolás Ortiz,3511.36,1,Tablet iPad Air 10.9,1,4,2023-08-13 20:25:00,2023-08-13 20:25:00
+26,97,Tomás Díaz,3422.53,1,Smartphone Samsung A55,1,3,2023-05-19 19:50:00,2023-05-19 19:50:00
+26,97,Tomás Díaz,3422.53,1,Disco SSD Externo 1TB,1,3,2023-05-19 19:50:00,2023-05-19 19:50:00
+26,97,Tomás Díaz,3422.53,1,Sillón Relax 3 Cuerpos,1,2,2023-05-19 19:50:00,2023-05-19 19:50:00
+26,97,Tomás Díaz,3422.53,1,Té Verde Matcha 100g,1,3,2023-05-19 19:50:00,2023-05-19 19:50:00
+27,7,Tomás Pérez,3322.08,2,Botas Timberland Classic,1,4,2023-09-23 16:53:00,2024-01-29 16:26:00
+27,7,Tomás Pérez,3322.08,2,Aspiradora Dyson V15,1,4,2024-01-29 16:26:00,2024-01-29 16:26:00
+27,7,Tomás Pérez,3322.08,2,Té Verde Matcha 100g,1,3,2024-01-29 16:26:00,2024-01-29 16:26:00
+27,7,Tomás Pérez,3322.08,2,Chocolates Lindt Selección,1,1,2024-01-29 16:26:00,2024-01-29 16:26:00
+27,7,Tomás Pérez,3322.08,2,Perfume Chanel N°5 50ml,1,2,2024-01-29 16:26:00,2024-01-29 16:26:00
+27,7,Tomás Pérez,3322.08,2,Set Maquillaje MAC Studio,1,3,2023-09-23 16:53:00,2024-01-29 16:26:00
+27,7,Tomás Pérez,3322.08,2,Muñeca Barbie Astronauta,1,1,2024-01-29 16:26:00,2024-01-29 16:26:00
+28,91,Martín Flores,3013.41,1,Set Sábanas Percal 400h,1,4,2024-05-12 11:58:00,2024-05-12 11:58:00
+28,91,Martín Flores,3013.41,1,Aceite de Oliva Extra Virgen 1L,1,1,2024-05-12 11:58:00,2024-05-12 11:58:00
+28,91,Martín Flores,3013.41,1,Bicicleta MTB Specialized,1,3,2024-05-12 11:58:00,2024-05-12 11:58:00
+29,61,Martín García,2982.47,2,Auriculares Sony WH-1000XM5,1,4,2024-06-23 09:20:00,2024-06-23 09:20:00
+29,61,Martín García,2982.47,2,Botas Timberland Classic,1,4,2024-06-23 09:20:00,2024-06-23 09:20:00
+29,61,Martín García,2982.47,2,Lámpara de Pie LED,1,3,2023-06-07 12:01:00,2024-06-23 09:20:00
+29,61,Martín García,2982.47,2,Sapiens - Yuval Harari,1,4,2023-06-07 12:01:00,2024-06-23 09:20:00
+29,61,Martín García,2982.47,2,Perfume Chanel N°5 50ml,1,2,2024-06-23 09:20:00,2024-06-23 09:20:00
+30,6,Agustina Hernández,2809.66,1,Laptop HP ProBook 450,1,1,2023-03-30 19:58:00,2023-03-30 19:58:00
+30,6,Agustina Hernández,2809.66,1,Mouse Inalámbrico MX Master,1,1,2023-03-30 19:58:00,2023-03-30 19:58:00
+30,6,Agustina Hernández,2809.66,1,Pelota Fútbol Adidas Pro,1,2,2023-03-30 19:58:00,2023-03-30 19:58:00
+30,6,Agustina Hernández,2809.66,1,LEGO City Police Station,1,4,2023-03-30 19:58:00,2023-03-30 19:58:00
+30,6,Agustina Hernández,2809.66,1,Hot Wheels 20 autos Pack,1,2,2023-03-30 19:58:00,2023-03-30 19:58:00
+31,93,Santiago Morales,2768.17,1,Laptop HP ProBook 450,1,1,2023-01-10 17:08:00,2023-01-10 17:08:00
+31,93,Santiago Morales,2768.17,1,Lámpara de Pie LED,1,1,2023-01-10 17:08:00,2023-01-10 17:08:00
+31,93,Santiago Morales,2768.17,1,Perfume Chanel N°5 50ml,1,2,2023-01-10 17:08:00,2023-01-10 17:08:00
+31,93,Santiago Morales,2768.17,1,Muñeca Barbie Astronauta,1,2,2023-01-10 17:08:00,2023-01-10 17:08:00
+32,23,Ricardo Martínez,2554.69,1,Monitor Dell 24 FHD,1,4,2023-04-05 08:04:00,2023-04-05 08:04:00
+32,23,Ricardo Martínez,2554.69,1,Tablet iPad Air 10.9,1,1,2023-04-05 08:04:00,2023-04-05 08:04:00
+32,23,Ricardo Martínez,2554.69,1,Zapatillas Nike Air Max,1,1,2023-04-05 08:04:00,2023-04-05 08:04:00
+33,50,Daniela Torres,2476.65,3,Teclado Logitech MX Keys,1,3,2023-09-28 13:23:00,2024-01-09 12:43:00
+33,50,Daniela Torres,2476.65,3,Mouse Inalámbrico MX Master,1,4,2023-06-11 20:32:00,2024-01-09 12:43:00
+33,50,Daniela Torres,2476.65,3,Campera The North Face,1,1,2023-06-11 20:32:00,2024-01-09 12:43:00
+33,50,Daniela Torres,2476.65,3,Cafetera Nespresso Vertuo,1,1,2023-09-28 13:23:00,2024-01-09 12:43:00
+33,50,Daniela Torres,2476.65,3,Lámpara de Pie LED,1,4,2024-01-09 12:43:00,2024-01-09 12:43:00
+33,50,Daniela Torres,2476.65,3,Café Origen Etiopía 250g,1,4,2023-06-11 20:32:00,2024-01-09 12:43:00
+33,50,Daniela Torres,2476.65,3,Chocolates Lindt Selección,1,4,2023-06-11 20:32:00,2024-01-09 12:43:00
+33,50,Daniela Torres,2476.65,3,Colchoneta Yoga 6mm,1,2,2024-01-09 12:43:00,2024-01-09 12:43:00
+33,50,Daniela Torres,2476.65,3,El Principito - Saint-Exupéry,1,3,2024-01-09 12:43:00,2024-01-09 12:43:00
+33,50,Daniela Torres,2476.65,3,Crema Hidratante Nivea Q10,1,4,2023-09-28 13:23:00,2024-01-09 12:43:00
+33,50,Daniela Torres,2476.65,3,Muñeca Barbie Astronauta,1,3,2023-09-28 13:23:00,2024-01-09 12:43:00
+33,50,Daniela Torres,2476.65,3,Hot Wheels 20 autos Pack,1,4,2023-09-28 13:23:00,2024-01-09 12:43:00
+34,4,Valentina Rodríguez,2318.37,2,Campera The North Face,1,3,2024-03-30 08:59:00,2024-03-30 08:59:00
+34,4,Valentina Rodríguez,2318.37,2,Botas Timberland Classic,1,3,2023-05-20 15:00:00,2024-03-30 08:59:00
+34,4,Valentina Rodríguez,2318.37,2,Café Origen Etiopía 250g,1,4,2024-03-30 08:59:00,2024-03-30 08:59:00
+34,4,Valentina Rodríguez,2318.37,2,Raqueta Tenis Wilson Blade,1,2,2024-03-30 08:59:00,2024-03-30 08:59:00
+34,4,Valentina Rodríguez,2318.37,2,Set Maquillaje MAC Studio,1,2,2024-03-30 08:59:00,2024-03-30 08:59:00
+34,4,Valentina Rodríguez,2318.37,2,LEGO City Police Station,1,3,2024-03-30 08:59:00,2024-03-30 08:59:00
+35,15,Facundo Ortiz,2227.17,3,Disco SSD Externo 1TB,1,2,2023-05-26 12:46:00,2023-09-24 20:31:00
+35,15,Facundo Ortiz,2227.17,3,Botas Timberland Classic,1,1,2023-05-26 12:46:00,2023-09-24 20:31:00
+35,15,Facundo Ortiz,2227.17,3,Aspiradora Dyson V15,1,3,2023-09-24 20:31:00,2023-09-24 20:31:00
+35,15,Facundo Ortiz,2227.17,3,Aceite de Oliva Extra Virgen 1L,1,4,2023-04-17 15:54:00,2023-09-24 20:31:00
+35,15,Facundo Ortiz,2227.17,3,Mancuernas 10kg Par,1,2,2023-05-26 12:46:00,2023-09-24 20:31:00
+35,15,Facundo Ortiz,2227.17,3,Sapiens - Yuval Harari,1,2,2023-05-26 12:46:00,2023-09-24 20:31:00
+35,15,Facundo Ortiz,2227.17,3,Crema Hidratante Nivea Q10,1,3,2023-04-17 15:54:00,2023-09-24 20:31:00
+36,2,Florencia López,2134.18,1,Remera Polo Ralph Lauren,1,1,2024-01-30 16:53:00,2024-01-30 16:53:00
+36,2,Florencia López,2134.18,1,Cafetera Nespresso Vertuo,1,1,2024-01-30 16:53:00,2024-01-30 16:53:00
+36,2,Florencia López,2134.18,1,Café Origen Etiopía 250g,1,4,2024-01-30 16:53:00,2024-01-30 16:53:00
+36,2,Florencia López,2134.18,1,Bicicleta MTB Specialized,1,2,2024-01-30 16:53:00,2024-01-30 16:53:00
+36,2,Florencia López,2134.18,1,Muñeca Barbie Astronauta,1,1,2024-01-30 16:53:00,2024-01-30 16:53:00
+37,19,Federico Reyes,2118.23,1,Monitor Dell 24 FHD,1,2,2023-04-15 13:16:00,2023-04-15 13:16:00
+37,19,Federico Reyes,2118.23,1,Vestido Zara Floral,1,4,2023-04-15 13:16:00,2023-04-15 13:16:00
+37,19,Federico Reyes,2118.23,1,Bicicleta MTB Specialized,1,1,2023-04-15 13:16:00,2023-04-15 13:16:00
+37,19,Federico Reyes,2118.23,1,Mancuernas 10kg Par,1,2,2023-04-15 13:16:00,2023-04-15 13:16:00
+38,95,Nicolás Ortiz,1994.47,2,Aceite de Oliva Extra Virgen 1L,2,6,2023-11-18 12:49:00,2023-11-18 12:49:00
+39,16,Jimena Ramos,1971.87,1,Sillón Relax 3 Cuerpos,1,3,2023-08-02 12:11:00,2023-08-02 12:11:00
+39,16,Jimena Ramos,1971.87,1,Set Sábanas Percal 400h,1,1,2023-08-02 12:11:00,2023-08-02 12:11:00
+39,16,Jimena Ramos,1971.87,1,Sapiens - Yuval Harari,1,2,2023-08-02 12:11:00,2023-08-02 12:11:00
+39,16,Jimena Ramos,1971.87,1,Crema Hidratante Nivea Q10,1,3,2023-08-02 12:11:00,2023-08-02 12:11:00
+40,18,Gabriela Cruz,1814.91,2,Smartphone Samsung A55,1,2,2023-11-29 14:34:00,2024-03-20 08:10:00
+40,18,Gabriela Cruz,1814.91,2,Remera Polo Ralph Lauren,1,1,2023-11-29 14:34:00,2024-03-20 08:10:00
+40,18,Gabriela Cruz,1814.91,2,Lámpara de Pie LED,1,1,2023-11-29 14:34:00,2024-03-20 08:10:00
+40,18,Gabriela Cruz,1814.91,2,Café Origen Etiopía 250g,1,1,2023-11-29 14:34:00,2024-03-20 08:10:00
+40,18,Gabriela Cruz,1814.91,2,Sapiens - Yuval Harari,1,1,2024-03-20 08:10:00,2024-03-20 08:10:00
+40,18,Gabriela Cruz,1814.91,2,Python para Análisis de Datos,1,2,2024-03-20 08:10:00,2024-03-20 08:10:00
+40,18,Gabriela Cruz,1814.91,2,LEGO City Police Station,1,2,2024-03-20 08:10:00,2024-03-20 08:10:00
+40,18,Gabriela Cruz,1814.91,2,Hot Wheels 20 autos Pack,1,3,2024-03-20 08:10:00,2024-03-20 08:10:00
+41,77,Ignacio Díaz,1813.79,2,Cafetera Nespresso Vertuo,2,3,2023-03-08 16:09:00,2023-03-08 16:09:00
+42,66,Agustina Hernández,1778.40,1,Smartphone Samsung A55,1,3,2024-01-24 12:01:00,2024-01-24 12:01:00
+43,53,Ricardo Morales,1478.66,3,Remera Polo Ralph Lauren,1,4,2024-10-23 14:25:00,2024-10-23 14:25:00
+43,53,Ricardo Morales,1478.66,3,Jean Levi 511 Slim,1,2,2023-11-25 17:37:00,2024-10-23 14:25:00
+43,53,Ricardo Morales,1478.66,3,Botas Timberland Classic,1,3,2024-10-23 14:25:00,2024-10-23 14:25:00
+43,53,Ricardo Morales,1478.66,3,Set Sábanas Percal 400h,1,3,2023-11-25 17:37:00,2024-10-23 14:25:00
+43,53,Ricardo Morales,1478.66,3,Café Origen Etiopía 250g,1,2,2023-04-06 17:11:00,2024-10-23 14:25:00
+43,53,Ricardo Morales,1478.66,3,Crema Hidratante Nivea Q10,1,2,2023-04-06 17:11:00,2024-10-23 14:25:00
+43,53,Ricardo Morales,1478.66,3,Juego de Mesa Catan,1,1,2024-10-23 14:25:00,2024-10-23 14:25:00
+44,9,Benjamín Ramírez,1473.84,2,Teclado Logitech MX Keys,1,4,2024-02-27 08:24:00,2024-02-27 08:24:00
+44,9,Benjamín Ramírez,1473.84,2,Disco SSD Externo 1TB,1,1,2024-02-27 08:24:00,2024-02-27 08:24:00
+44,9,Benjamín Ramírez,1473.84,2,Cafetera Nespresso Vertuo,1,2,2024-02-27 08:24:00,2024-02-27 08:24:00
+44,9,Benjamín Ramírez,1473.84,2,Colchoneta Yoga 6mm,1,3,2023-09-03 15:16:00,2024-02-27 08:24:00
+44,9,Benjamín Ramírez,1473.84,2,Mancuernas 10kg Par,1,2,2023-09-03 15:16:00,2024-02-27 08:24:00
+44,9,Benjamín Ramírez,1473.84,2,Clean Code - Robert Martin,1,4,2024-02-27 08:24:00,2024-02-27 08:24:00
+45,57,Patricio Díaz,1451.10,2,Monitor Dell 24 FHD,1,2,2023-01-26 11:24:00,2024-02-27 11:06:00
+45,57,Patricio Díaz,1451.10,2,Aceite de Oliva Extra Virgen 1L,1,2,2023-01-26 11:24:00,2024-02-27 11:06:00
+45,57,Patricio Díaz,1451.10,2,Raqueta Tenis Wilson Blade,1,2,2024-02-27 11:06:00,2024-02-27 11:06:00
+45,57,Patricio Díaz,1451.10,2,Crema Hidratante Nivea Q10,1,2,2023-01-26 11:24:00,2024-02-27 11:06:00
+45,57,Patricio Díaz,1451.10,2,Hot Wheels 20 autos Pack,1,4,2023-01-26 11:24:00,2024-02-27 11:06:00
+46,56,Marcela Ramos,1327.86,1,Mouse Inalámbrico MX Master,1,4,2024-02-01 15:44:00,2024-02-01 15:44:00
+46,56,Marcela Ramos,1327.86,1,Botas Timberland Classic,1,4,2024-02-01 15:44:00,2024-02-01 15:44:00
+46,56,Marcela Ramos,1327.86,1,Chocolates Lindt Selección,1,2,2024-02-01 15:44:00,2024-02-01 15:44:00
+46,56,Marcela Ramos,1327.86,1,Colchoneta Yoga 6mm,1,1,2024-02-01 15:44:00,2024-02-01 15:44:00
+46,56,Marcela Ramos,1327.86,1,Muñeca Barbie Astronauta,1,1,2024-02-01 15:44:00,2024-02-01 15:44:00
+47,78,Gabriela Cruz,1292.65,1,Botas Timberland Classic,1,2,2024-09-03 15:24:00,2024-09-03 15:24:00
+47,78,Gabriela Cruz,1292.65,1,Bicicleta MTB Specialized,1,1,2024-09-03 15:24:00,2024-09-03 15:24:00
+47,78,Gabriela Cruz,1292.65,1,Crema Hidratante Nivea Q10,1,1,2024-09-03 15:24:00,2024-09-03 15:24:00
+48,45,Facundo González,1218.82,2,Auriculares Sony WH-1000XM5,1,3,2024-09-14 13:12:00,2024-09-14 13:12:00
+48,45,Facundo González,1218.82,2,Chocolates Lindt Selección,1,1,2024-09-14 13:12:00,2024-09-14 13:12:00
+48,45,Facundo González,1218.82,2,Muñeca Barbie Astronauta,1,4,2024-05-08 13:19:00,2024-09-14 13:12:00
+49,17,Ignacio Díaz,1153.25,1,Mouse Inalámbrico MX Master,1,4,2023-10-29 17:08:00,2023-10-29 17:08:00
+49,17,Ignacio Díaz,1153.25,1,Botas Timberland Classic,1,3,2023-10-29 17:08:00,2023-10-29 17:08:00
+49,17,Ignacio Díaz,1153.25,1,Café Origen Etiopía 250g,1,3,2023-10-29 17:08:00,2023-10-29 17:08:00
+49,17,Ignacio Díaz,1153.25,1,Té Verde Matcha 100g,1,3,2023-10-29 17:08:00,2023-10-29 17:08:00
+49,17,Ignacio Díaz,1153.25,1,Python para Análisis de Datos,1,1,2023-10-29 17:08:00,2023-10-29 17:08:00
+50,94,Valentina Castro,1150.86,1,Monitor Dell 24 FHD,1,3,2024-05-24 17:46:00,2024-05-24 17:46:00
+51,14,Natalia Castro,1143.58,2,Disco SSD Externo 1TB,1,1,2024-12-14 11:22:00,2024-12-14 11:22:00
+51,14,Natalia Castro,1143.58,2,Set Sábanas Percal 400h,1,4,2023-08-31 19:06:00,2024-12-14 11:22:00
+51,14,Natalia Castro,1143.58,2,Aceite de Oliva Extra Virgen 1L,1,4,2023-08-31 19:06:00,2024-12-14 11:22:00
+51,14,Natalia Castro,1143.58,2,Raqueta Tenis Wilson Blade,1,2,2023-08-31 19:06:00,2024-12-14 11:22:00
+51,14,Natalia Castro,1143.58,2,Muñeca Barbie Astronauta,1,1,2023-08-31 19:06:00,2024-12-14 11:22:00
+51,14,Natalia Castro,1143.58,2,Hot Wheels 20 autos Pack,1,2,2024-12-14 11:22:00,2024-12-14 11:22:00
+52,33,Santiago Morales,1014.32,3,Vestido Zara Floral,1,4,2023-12-12 18:08:00,2024-03-18 12:05:00
+52,33,Santiago Morales,1014.32,3,Set Sábanas Percal 400h,1,4,2024-03-18 12:05:00,2024-03-18 12:05:00
+52,33,Santiago Morales,1014.32,3,Café Origen Etiopía 250g,1,4,2024-03-18 12:05:00,2024-03-18 12:05:00
+52,33,Santiago Morales,1014.32,3,Chocolates Lindt Selección,1,2,2024-03-18 12:05:00,2024-03-18 12:05:00
+52,33,Santiago Morales,1014.32,3,Raqueta Tenis Wilson Blade,1,1,2023-01-20 18:10:00,2024-03-18 12:05:00
+53,39,Benjamín Reyes,926.55,1,Zapatillas Nike Air Max,1,4,2023-08-17 17:20:00,2023-08-17 17:20:00
+53,39,Benjamín Reyes,926.55,1,Pelota Fútbol Adidas Pro,1,4,2023-08-17 17:20:00,2023-08-17 17:20:00
+53,39,Benjamín Reyes,926.55,1,Mancuernas 10kg Par,1,3,2023-08-17 17:20:00,2023-08-17 17:20:00
+54,55,Esteban Ortiz,873.85,2,Monitor Dell 24 FHD,1,1,2024-09-27 11:35:00,2024-09-27 11:35:00
+54,55,Esteban Ortiz,873.85,2,Jean Levi 511 Slim,1,1,2024-09-27 11:35:00,2024-09-27 11:35:00
+54,55,Esteban Ortiz,873.85,2,Botas Timberland Classic,1,1,2024-08-08 17:05:00,2024-09-27 11:35:00
+54,55,Esteban Ortiz,873.85,2,Mancuernas 10kg Par,1,1,2024-08-08 17:05:00,2024-09-27 11:35:00
+54,55,Esteban Ortiz,873.85,2,El Principito - Saint-Exupéry,1,3,2024-09-27 11:35:00,2024-09-27 11:35:00
+54,55,Esteban Ortiz,873.85,2,Muñeca Barbie Astronauta,1,3,2024-08-08 17:05:00,2024-09-27 11:35:00
+55,82,Paola López,831.64,1,Zapatillas Nike Air Max,1,3,2023-10-17 12:17:00,2023-10-17 12:17:00
+55,82,Paola López,831.64,1,Jean Levi 511 Slim,1,4,2023-10-17 12:17:00,2023-10-17 12:17:00
+55,82,Paola López,831.64,1,Sapiens - Yuval Harari,1,4,2023-10-17 12:17:00,2023-10-17 12:17:00
+56,96,Agustina Ramos,796.37,1,Campera The North Face,1,1,2023-04-05 14:02:00,2023-04-05 14:02:00
+56,96,Agustina Ramos,796.37,1,Lámpara de Pie LED,1,3,2023-04-05 14:02:00,2023-04-05 14:02:00
+56,96,Agustina Ramos,796.37,1,Muñeca Barbie Astronauta,1,3,2023-04-05 14:02:00,2023-04-05 14:02:00
+57,60,Verónica Vargas,771.90,1,Campera The North Face,1,3,2024-04-27 08:04:00,2024-04-27 08:04:00
+58,32,Florencia Rivera,674.75,1,Aspiradora Dyson V15,1,1,2023-04-26 12:25:00,2023-04-26 12:25:00
+58,32,Florencia Rivera,674.75,1,Té Verde Matcha 100g,1,1,2023-04-26 12:25:00,2023-04-26 12:25:00
+58,32,Florencia Rivera,674.75,1,Python para Análisis de Datos,1,3,2023-04-26 12:25:00,2023-04-26 12:25:00
+59,5,Nicolás González,513.00,1,Disco SSD Externo 1TB,1,4,2024-05-21 13:28:00,2024-05-21 13:28:00
+59,5,Nicolás González,513.00,1,Hot Wheels 20 autos Pack,1,2,2024-05-21 13:28:00,2024-05-21 13:28:00
+60,47,Ignacio Pérez,458.49,1,Lámpara de Pie LED,1,3,2024-02-21 17:52:00,2024-02-21 17:52:00
+61,25,Esteban González,424.81,1,Zapatillas Nike Air Max,1,3,2024-07-31 17:14:00,2024-07-31 17:14:00
+61,25,Esteban González,424.81,1,Hot Wheels 20 autos Pack,1,1,2024-07-31 17:14:00,2024-07-31 17:14:00
+62,28,Silvia Sánchez,405.93,1,Perfume Chanel N°5 50ml,1,3,2023-06-24 17:56:00,2023-06-24 17:56:00
+63,86,Marcela Hernández,404.32,2,Jean Levi 511 Slim,1,1,2023-11-03 11:08:00,2023-11-03 11:08:00
+63,86,Marcela Hernández,404.32,2,Set Sábanas Percal 400h,1,2,2023-11-03 11:08:00,2023-11-03 11:08:00
+63,86,Marcela Hernández,404.32,2,Té Verde Matcha 100g,1,1,2023-11-03 11:08:00,2023-11-03 11:08:00
+63,86,Marcela Hernández,404.32,2,Chocolates Lindt Selección,1,3,2023-11-03 11:08:00,2023-11-03 11:08:00
+63,86,Marcela Hernández,404.32,2,Clean Code - Robert Martin,1,1,2023-07-29 17:35:00,2023-11-03 11:08:00
+64,51,Antonio Flores,353.94,1,Clean Code - Robert Martin,1,3,2023-01-11 15:42:00,2023-01-11 15:42:00
+64,51,Antonio Flores,353.94,1,Juego de Mesa Catan,1,4,2023-01-11 15:42:00,2023-01-11 15:42:00
+65,22,Paola López,346.02,1,Jean Levi 511 Slim,1,3,2024-05-23 18:48:00,2024-05-23 18:48:00
+65,22,Paola López,346.02,1,Clean Code - Robert Martin,1,1,2024-05-23 18:48:00,2024-05-23 18:48:00
+65,22,Paola López,346.02,1,Hot Wheels 20 autos Pack,1,1,2024-05-23 18:48:00,2024-05-23 18:48:00
+66,84,Claudia Rodríguez,342.54,1,Zapatillas Nike Air Max,1,2,2024-12-09 16:20:00,2024-12-09 16:20:00
+66,84,Claudia Rodríguez,342.54,1,Muñeca Barbie Astronauta,1,2,2024-12-09 16:20:00,2024-12-09 16:20:00
+67,62,Florencia López,337.87,1,Jean Levi 511 Slim,1,3,2023-10-30 19:49:00,2023-10-30 19:49:00
+67,62,Florencia López,337.87,1,Clean Code - Robert Martin,1,1,2023-10-30 19:49:00,2023-10-30 19:49:00
+67,62,Florencia López,337.87,1,Muñeca Barbie Astronauta,1,1,2023-10-30 19:49:00,2023-10-30 19:49:00
+68,67,Tomás Pérez,269.56,1,Café Origen Etiopía 250g,1,3,2024-05-15 12:55:00,2024-05-15 12:55:00
+68,67,Tomás Pérez,269.56,1,Clean Code - Robert Martin,1,2,2024-05-15 12:55:00,2024-05-15 12:55:00
+68,67,Tomás Pérez,269.56,1,Crema Hidratante Nivea Q10,1,1,2024-05-15 12:55:00,2024-05-15 12:55:00
+68,67,Tomás Pérez,269.56,1,Hot Wheels 20 autos Pack,1,4,2024-05-15 12:55:00,2024-05-15 12:55:00
+69,27,Patricio Pérez,268.17,1,LEGO City Police Station,1,3,2023-04-28 17:08:00,2023-04-28 17:08:00
+70,49,Federico Ramírez,154.96,1,Lámpara de Pie LED,1,1,2023-10-10 09:26:00,2023-10-10 09:26:00
+71,74,Natalia Castro,141.22,1,Vestido Zara Floral,1,1,2023-02-02 10:26:00,2023-02-02 10:26:00
+71,74,Natalia Castro,141.22,1,Té Verde Matcha 100g,1,3,2023-02-02 10:26:00,2023-02-02 10:26:00
+72,85,Esteban González,119.91,1,Colchoneta Yoga 6mm,1,3,2023-01-21 19:54:00,2023-01-21 19:54:00
+73,30,Verónica Torres,118.59,1,Colchoneta Yoga 6mm,1,3,2023-02-15 08:02:00,2023-02-15 08:02:00
+
+COMPROBACIONES
+OK: copia del dataset identica byte por byte al original.
+OK: no se agregaron registros al dataset.
+OK: los resultados coinciden con una agregacion independiente de las filas originales.
+OK: las nueve tablas originales conservan el mismo contenido.
+OK: consultas repetibles sin modificaciones de datos.
+OK: vista de ventas recreable sin cambios en resultados.
+OK: ranking por ingreso y favoritos por ocasiones; se conservan empates.
