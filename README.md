@@ -1,11 +1,3 @@
-# Entregas de SQL y Estadística Aplicada al Negocio
-
-- **Preentrega 5:** [Consulta de análisis avanzado, instrucciones y resultados](preentrega_5/README.md).
-- **Preentrega 4:** consultas, dataset e instrucciones detalladas a continuación.
-- **Preentrega 2:** [script e instrucciones originales](preentrega_2/README.md).
-
----
-
 # Preentrega 4 - Consultas multicapa para análisis de negocio
 
 **Autor:** Augusto Rinaldi Davids.  
@@ -138,3 +130,7 @@ Estas comprobaciones verifican la ejecución técnica; no constituyen una califi
 ## Entregas anteriores
 
 La [Preentrega 2](preentrega_2/README.md) se conserva en la carpeta `preentrega_2`, con su script y README originales. La entrega actual de este repositorio es la Preentrega 4, disponible en la raíz.
+
+## Preentrega 5
+
+La [Preentrega 5 tiene su propio repositorio](https://github.com/augustorinaldi99/coderhouse-sql-preentrega-5). La carpeta `preentrega_5` de este repositorio se conserva como copia de la publicación anterior.
