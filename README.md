@@ -1,3 +1,11 @@
+# Entregas de SQL y Estadística Aplicada al Negocio
+
+- **Preentrega 5:** [Consulta de análisis avanzado, instrucciones y resultados](preentrega_5/README.md).
+- **Preentrega 4:** consultas, dataset e instrucciones detalladas a continuación.
+- **Preentrega 2:** [script e instrucciones originales](preentrega_2/README.md).
+
+---
+
 # Preentrega 4 - Consultas multicapa para análisis de negocio
 
 **Autor:** Augusto Rinaldi Davids.  
